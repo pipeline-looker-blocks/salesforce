@@ -1,4 +1,4 @@
-- view: campaign
+- view: _campaign
   sql_table_name: salesforce.sf_campaign
   fields:
   
@@ -9,7 +9,7 @@
     type: string
     sql: ${TABLE}.id
 
-  - dimension: actualcost
+  - dimension: actual_cost
     type: number
     sql: ${TABLE}.actualcost
 

@@ -1,4 +1,4 @@
-- view: lead
+- view: _lead
   sql_table_name: salesforce.sf_lead
   fields:
   
@@ -9,7 +9,7 @@
     type: string
     sql: ${TABLE}.id
 
-  - dimension: annualrevenue
+  - dimension: annual_revenue
     type: number
     sql: ${TABLE}.annualrevenue
 
