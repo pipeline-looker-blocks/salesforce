@@ -1,4 +1,4 @@
-- view: account
+- view: _account
   sql_table_name: salesforce.sf_account
   fields:
 
@@ -9,7 +9,7 @@
     type: string
     sql: ${TABLE}.id
 
-  - dimension: accountnumber
+  - dimension: account_number
     type: string
     sql: ${TABLE}.accountnumber
 

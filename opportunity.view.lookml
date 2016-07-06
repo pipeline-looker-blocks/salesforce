@@ -1,4 +1,4 @@
-- view: opportunity
+- view: _opportunity
   sql_table_name: salesforce.sf_opportunity
   fields:
   
@@ -73,7 +73,7 @@
     type: yesno
     sql: ${TABLE}.isdeleted
 
-  - dimension: isprivate
+  - dimension: is_private
     type: yesno
     hidden: true
     sql: ${TABLE}.isprivate
