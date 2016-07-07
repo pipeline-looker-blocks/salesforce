@@ -25,20 +25,26 @@
     type: average
     sql: ${annual_revenue}
     value_format: '$#,##0'
+    filters:
+      account.is_deleted: 0
     
   - measure: total_number_of_employees
     type: sum
     sql: ${number_of_employees}
+    filters:
+      account.is_deleted: 0
     
   - measure: average_number_of_employees
     type: avg
     sql: ${number_of_employees}
+    filters:
+      account.is_deleted: 0
     
   - measure: count_customers
     type: count
     filters:
       account.type: '"Customer"'
-    
+      account.is_deleted: 0    
     
 - view: lead
   extends: _lead
@@ -64,33 +70,39 @@
     drill_fields: detail*
     filters:
       converted_contact_id: -null
+      is_deleted: 0
     
   - measure: converted_to_account_count
     type: count
     drill_fields: detail*
     filters:
       converted_account_id: -null
+      is_deleted: 0
     
   - measure: converted_to_opportunity_count
     type: count
     drill_fields: detail*
     filters:
       converted_opportunity_id: -null
+      is_deleted: 0
     
   - measure: conversion_to_contact_percent
     sql: 100.00 * ${converted_to_contact_count} / NULLIF(${count},0)
     type: number
     value_format: '0.00\%'
+
     
   - measure: conversion_to_account_percent
     sql: 100.00 * ${converted_to_account_count} / NULLIF(${count},0)
     type: number
     value_format: '0.00\%'
+
     
   - measure: conversion_to_opportunity_percent
     sql: 100.00 * ${converted_to_opportunity_count} / NULLIF(${count},0)
     type: number
     value_format: '0.00\%'
+
     
   sets:
     detail:
@@ -143,6 +155,8 @@
     type: sum
     sql: ${amount}
     value_format: '$#,##0'
+    filters:
+      opportunity.is_deleted: 0
     
   - measure: average_revenue_won
     label: 'Average Revenue (Closed/Won)'
@@ -150,6 +164,7 @@
     sql: ${amount}
     filters:
       is_won: Yes    
+      is_deleted: 0
     value_format: '$#,##0' 
     
   - measure: average_revenue_lost
@@ -157,7 +172,8 @@
     type: average
     sql: ${amount}
     filters:
-      is_lost: Yes    
+      is_lost: Yes 
+      is_deleted: 0
     value_format: '$#,##0'     
     
   - measure: total_pipeline_revenue
@@ -165,38 +181,47 @@
     sql: ${amount}
     filters:
       is_closed: No
+      is_deleted: 0
     value_format: '[>=1000000]0.00,,"M";[>=1000]0.00,"K";$0.00'  
     
   - measure: average_deal_size
     type: avg
     sql: ${amount}
     value_format: '$#,##0'
+    filters:
+      opportunity.is_deleted: 0
   
   - measure: count_won
     type: count
     filters:
       is_won: Yes
+      is_deleted: 0
     drill_fields: [opportunity.id, account.name, type]
     
   - measure: average_days_open
     type: avg
     sql: ${days_open}
+    filters:
+      opportunity.is_deleted: 0
     
   - measure: count_closed
     type: count
     filters: 
       is_closed: Yes
+      is_deleted: 0
       
   - measure: count_open
     type: count
     filters:
       is_closed: No
+      is_deleted: 0
     
   - measure: count_lost
     type: count
     filters:
       is_closed: Yes
       is_won: No
+      is_deleted: 0
     drill_fields: [opportunity.id, account.name, type] 
 
   - measure: win_percentage
@@ -214,12 +239,14 @@
     filters:
       is_won: Yes
       opportunity.type: '"New Business"'
+      is_deleted: 0
     drill_fields: [opportunity.id, account.name, type]    
     
   - measure: count_new_business
     type: count
     filters:
       opportunity.type: '"New Business"'
+      is_deleted: 0
     drill_fields: [opportunity.id, account.name, type]   
   
   
