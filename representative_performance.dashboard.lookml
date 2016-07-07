@@ -25,6 +25,8 @@
     type: field_filter
     explore: account
     field: account.business_segment
+    
+#     @shaun add date filter here
 
   elements:
 
