@@ -145,9 +145,11 @@
   - measure: count
     type: count
     drill_fields: [id, name]
-#     do we need to filter for "isdeleted is null" here?
+#     do we need to filter for "isdeleted = 0" here?
 
   - measure: avg_annual_revenue
     type: avg
     sql: ${TABLE}.annual_revenue
+    filters: 
+      account.is_deleted: 0
 
