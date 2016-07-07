@@ -2,6 +2,17 @@
   title: "Sales & Marketing Leadership"
   layout: tile
   tile_size: 100
+  
+# @shaun: i'd recommend using a grid layout (https://looker.com/docs/reference/dashboard-reference)
+# where you can specify the height of each row and the elements in each row. the dashboards look very funky
+# right now. here's an example:
+
+#   layout: grid
+#   rows:
+#     - elements: [count_won_deals, salesrep_total_revenue, ...]
+#       height: 150
+#     - elements: [something_else]
+#       height: 300
 
   filters:
   

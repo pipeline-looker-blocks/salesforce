@@ -25,7 +25,6 @@
     type: field_filter
     explore: account
     field: account.business_segment
-    default_value: 'Enterprise'
 
   elements:
 
