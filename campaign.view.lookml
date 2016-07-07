@@ -119,4 +119,40 @@
   - measure: count
     type: count
     drill_fields: [id, name]
+    
+  - measure: total_number_of_converted_leads
+    type: sum
+    sql: ${TABLE}.number_of_converted_leads
 
+  - measure: total_number_of_leads
+    type: sum
+    sql: ${TABLE}.number_of_leads
+
+  - measure: total_number_of_opportunities
+    type: sum
+    sql: ${TABLE}.number_of_opportunities
+
+  - measure: total_number_of_responses
+    type: sum
+    sql: ${TABLE}.number_of_responses
+
+  - measure: total_number_of_won_opportunities
+    type: sum
+    sql: ${TABLE}.number_of_won_opportunities
+
+  - measure: total_number_sent
+    type: sum
+    hidden: true
+    sql: ${TABLE}.number_sent
+
+  - measure: total_actual_cost
+    type: sum
+    sql: ${TABLE}.actual_cost
+
+  - measure: total_amount_all_opportunities
+    type: sum
+    sql: ${TABLE}.amount_all_opportunities
+
+  - measure: total_amount_won_opportunities
+    type: sum
+    sql: ${TABLE}.amount_won_opportunities
