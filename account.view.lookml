@@ -103,9 +103,9 @@
     type: string
     sql: ${TABLE}.phone
 
-  - dimension: photo_url
-    type: string
-    sql: ${TABLE}.photourl
+#   - dimension: photo_url
+#     type: string
+#     sql: ${TABLE}.photourl
     
   - dimension: shipping_city
     type: string
@@ -145,4 +145,9 @@
   - measure: count
     type: count
     drill_fields: [id, name]
+#     do we need to filter for "isdeleted is null" here?
+
+  - measure: avg_annual_revenue
+    type: avg
+    sql: ${TABLE}.annual_revenue
 
