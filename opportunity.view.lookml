@@ -125,3 +125,5 @@
   - measure: count
     type: count
     drill_fields: [id, name, stage_name, forecast_category_name]
+    filters:
+      opportunity.is_deleted: 0

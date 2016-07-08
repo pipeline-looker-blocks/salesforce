@@ -64,9 +64,9 @@
     type: string
     sql: ${TABLE}.email
 
-  - dimension: fax
-    type: string
-    sql: ${TABLE}.fax
+#   - dimension: fax
+#     type: string
+#     sql: ${TABLE}.fax
 
   - dimension: first_name
     type: string
@@ -122,10 +122,6 @@
     type: string
     sql: ${TABLE}.phone
 
-  - dimension: photo_url
-    type: string
-    sql: ${TABLE}.photourl
-
   - dimension: postal_code
     type: string
     sql: ${TABLE}.postalcode
@@ -164,4 +160,11 @@
   - measure: count
     type: count
     drill_fields: [id, last_name, name, first_name]
+    filters:
+      lead.is_deleted: 0
 
+  - measure: avg_annual_revenue
+    type: avg
+    sql: ${TABLE}.annual_revenue
+    filters:
+      lead.is_deleted: 0
