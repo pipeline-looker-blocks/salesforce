@@ -17,9 +17,9 @@
     type: string
     sql: ${TABLE}.assistantname
 
-  - dimension: assistant_phone
-    type: string
-    sql: ${TABLE}.assistantphone
+#   - dimension: assistant_phone
+#     type: string
+#     sql: ${TABLE}.assistantphone
 
   - dimension_group: birth_date
     type: time
@@ -107,29 +107,29 @@
     type: string
     sql: ${TABLE}.name
 
-  - dimension: other_city
-    type: string
-    sql: ${TABLE}.othercity
-
-  - dimension: other_country
-    type: string
-    sql: ${TABLE}.othercountry
-
-  - dimension: other_phone
-    type: string
-    sql: ${TABLE}.otherphone
-
-  - dimension: other_postal_code
-    type: string
-    sql: ${TABLE}.otherpostalcode
-
-  - dimension: other_state
-    type: string
-    sql: ${TABLE}.otherstate
-
-  - dimension: other_street
-    type: string
-    sql: ${TABLE}.otherstreet
+#   - dimension: other_city
+#     type: string
+#     sql: ${TABLE}.othercity
+# 
+#   - dimension: other_country
+#     type: string
+#     sql: ${TABLE}.othercountry
+# 
+#   - dimension: other_phone
+#     type: string
+#     sql: ${TABLE}.otherphone
+# 
+#   - dimension: other_postal_code
+#     type: string
+#     sql: ${TABLE}.otherpostalcode
+# 
+#   - dimension: other_state
+#     type: string
+#     sql: ${TABLE}.otherstate
+# 
+#   - dimension: other_street
+#     type: string
+#     sql: ${TABLE}.otherstreet
 
   - dimension: owner_id
     type: string
@@ -139,10 +139,6 @@
   - dimension: phone
     type: string
     sql: ${TABLE}.phone
-
-  - dimension: photo_url
-    type: string
-    sql: ${TABLE}.photourl
 
   - dimension: salutation
     type: string

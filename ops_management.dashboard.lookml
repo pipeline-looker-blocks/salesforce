@@ -2,6 +2,17 @@
   title: "Sales Ops Management"
   layout: tile
   tile_size: 100
+  
+# @shaun: i'd recommend using a grid layout (https://looker.com/docs/reference/dashboard-reference)
+# where you can specify the height of each row and the elements in each row. the dashboards look very funky
+# right now. here's an example:
+
+#   layout: grid
+#   rows:
+#     - elements: [count_won_deals, salesrep_total_revenue, ...]
+#       height: 150
+#     - elements: [something_else]
+#       height: 300
 
   filters:
 
@@ -62,14 +73,14 @@
     type: single_value
     model: salesforce
     explore: opportunity
-    measures: [opportunity.average_deal_style]
+    measures: [opportunity.average_deal_size]
     listen:
       state: account.billing_state
       date_range: opportunity.close_date
       sales_team: account.business_segment
     filters:
       opportunity.stage_name: '"Closed Won"'
-    sorts: [opportunity.average_deal_style desc]
+    sorts: [opportunity.average_deal_size desc]
     font_size: medium
     text_color: black
     height: 2
