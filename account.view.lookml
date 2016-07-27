@@ -16,6 +16,7 @@
   - dimension: annual_revenue
     type: number
     sql: ${TABLE}.annualrevenue
+    value_format: '$#,##0'
 
   - dimension: attributes__type
     type: string
@@ -145,11 +146,11 @@
   - measure: count
     type: count
     drill_fields: [id, name]
-#     do we need to filter for "isdeleted = 0" here?
+#     do we need to filter for "isdeleted = 0" here? Yes
 
-  - measure: avg_annual_revenue
-    type: avg
-    sql: ${TABLE}.annual_revenue
-    filters: 
-      account.is_deleted: 0
+#   - measure: avg_annual_revenue
+#     type: avg
+#     sql: ${TABLE}.annual_revenue
+#     filters: 
+#       is_deleted: -'0'
 

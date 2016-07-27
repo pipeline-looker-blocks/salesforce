@@ -19,32 +19,32 @@
 
   - measure: percent_of_accounts
     type: percent_of_total
-    sql: ${count}
+    sql: ${account.count}
     
   - measure: average_annual_revenue
     type: average
-    sql: ${annual_revenue}
+    sql: ${account.annual_revenue}
     value_format: '$#,##0'
     filters:
-      account.is_deleted: 0
+      account.is_deleted: -'0'
     
   - measure: total_number_of_employees
     type: sum
-    sql: ${number_of_employees}
+    sql: ${account.number_of_employees}
     filters:
-      account.is_deleted: 0
+      account.is_deleted: -'0'
     
   - measure: average_number_of_employees
     type: avg
-    sql: ${number_of_employees}
+    sql: ${account.number_of_employees}
     filters:
-      account.is_deleted: 0
+      account.is_deleted: -'0'
     
   - measure: count_customers
     type: count
     filters:
       account.type: '"Customer"'
-      account.is_deleted: 0    
+      account.is_deleted: -'0' 
     
 - view: lead
   extends: _lead
@@ -70,21 +70,21 @@
     drill_fields: detail*
     filters:
       converted_contact_id: -null
-      is_deleted: 0
+      lead.is_deleted: -'0'
     
   - measure: converted_to_account_count
     type: count
     drill_fields: detail*
     filters:
       converted_account_id: -null
-      is_deleted: 0
+      lead.is_deleted: -'0'
     
   - measure: converted_to_opportunity_count
     type: count
     drill_fields: detail*
     filters:
       converted_opportunity_id: -null
-      is_deleted: 0
+      lead.is_deleted: -'0'
     
   - measure: conversion_to_contact_percent
     sql: 100.00 * ${converted_to_contact_count} / NULLIF(${count},0)
