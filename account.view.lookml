@@ -117,7 +117,7 @@
     sql: ${TABLE}.shippingcountry
 
   - dimension: shipping_postal_code
-    type: string
+    type: zipcode
     sql: ${TABLE}.shippingpostalcode
 
   - dimension: shipping_state
