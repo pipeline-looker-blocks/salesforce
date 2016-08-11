@@ -1,5 +1,5 @@
 - view: _contact
-  sql_table_name: salesforce.sf_contact
+  sql_table_name: looker_salesforce.sf_contact
   fields:
   
   # dimensions #
@@ -158,4 +158,3 @@
   - measure: count
     type: count
     drill_fields: [id, name]
-

@@ -1,5 +1,5 @@
 - view: _opportunity
-  sql_table_name: salesforce.sf_opportunity
+  sql_table_name: looker_salesforce.sf_opportunity
   fields:
   
 # dimensions #
@@ -125,5 +125,5 @@
   - measure: count
     type: count
     drill_fields: [id, name, stage_name, forecast_category_name]
-    filters:
-      opportunity.is_deleted: 0
+#     filters:
+#       opportunity.is_deleted: 0

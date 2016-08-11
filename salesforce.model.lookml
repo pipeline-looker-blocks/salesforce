@@ -8,8 +8,8 @@
 # views to explore——i.e., "base views" #
 
 - explore: account
-  sql_always_where: |
-    NOT ${account.is_deleted}
+#   sql_always_where: |
+#     NOT ${account.is_deleted}
   fields: [ALL_FIELDS*,-account_owner.opportunity_set*,-creator.opportunity_set*]
   joins:
     - join: contact
@@ -28,8 +28,8 @@
 
 
 - explore: lead
-  sql_always_where: |
-    NOT ${lead.is_deleted}
+#   sql_always_where: |
+#     NOT ${lead.is_deleted}
   joins:
     - join: lead_owner
       from: user
@@ -60,8 +60,8 @@
 
 
 - explore: opportunity
-  sql_always_where: |
-    NOT ${opportunity.is_deleted}
+#   sql_always_where: |
+#     NOT ${opportunity.is_deleted}
   joins:
     - join: account
       sql_on: ${opportunity.account_id} = ${account.id}
