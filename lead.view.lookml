@@ -1,5 +1,5 @@
 - view: _lead
-  sql_table_name: salesforce.sf_lead
+  sql_table_name: looker_salesforce.sf_lead
   fields:
   
 # dimensions #
@@ -160,11 +160,11 @@
   - measure: count
     type: count
     drill_fields: [id, last_name, name, first_name]
-    filters:
-      lead.is_deleted: 0
+#     filters:
+#       lead.is_deleted: 0
 
   - measure: avg_annual_revenue
     type: avg
     sql: ${TABLE}.annual_revenue
-    filters:
-      lead.is_deleted: 0
+#     filters:
+#       lead.is_deleted: 0

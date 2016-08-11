@@ -4,10 +4,12 @@
   rows:
     - elements: [count_won_deals, salesrep_total_revenue, count_lost_deals, win_percentage ]
       height: 150
-    - elements: [opportunities_to_wins_trend_peers, salesrep_revenue_won_comparison]
-      height: 300
+    - elements: [opportunities_to_wins_trend_peers]
+      height: 400
+    - elements: [salesrep_revenue_won_comparison]
+      height: 400
     - elements: [salesrep_win_rate_comparison, salesrep_revenue_pipeline_comparison]
-      height: 300
+      height: 400
   
   filters:
   

@@ -1,5 +1,5 @@
 - view: _campaign
-  sql_table_name: salesforce.sf_campaign
+  sql_table_name: looker_salesforce.sf_campaign
   fields:
   
 # dimensions #
@@ -118,21 +118,21 @@
 
   - measure: count
     type: count
-    filters:
-      campaign.is_deleted: 0
+#     filters:
+#       campaign.is_deleted: 0
     drill_fields: [id, name]
     
   - measure: total_number_of_converted_leads
     type: sum
     sql: ${TABLE}.number_of_converted_leads
-    filters:
-      campaign.is_deleted: 0
+#     filters:
+#       campaign.is_deleted: 0
 
   - measure: total_number_of_leads
     type: sum
     sql: ${TABLE}.number_of_leads
-    filters:
-      campaign.is_deleted: 0
+#     filters:
+# #       campaign.is_deleted: 0
 
   - measure: total_number_of_opportunities
     type: sum
@@ -143,36 +143,36 @@
   - measure: total_number_of_responses
     type: sum
     sql: ${TABLE}.number_of_responses
-    filters:
-      campaign.is_deleted: 0
+#     filters:
+#       campaign.is_deleted: 0
 
   - measure: total_number_of_won_opportunities
     type: sum
     sql: ${TABLE}.number_of_won_opportunities
-    filters:
-      campaign.is_deleted: 0
+#     filters:
+#       campaign.is_deleted: 0
 
   - measure: total_number_sent
     type: sum
     hidden: true
     sql: ${TABLE}.number_sent
-    filters:
-      campaign.is_deleted: 0
+#     filters:
+#       campaign.is_deleted: 0
 
   - measure: total_actual_cost
     type: sum
     sql: ${TABLE}.actual_cost
-    filters:
-      campaign.is_deleted: 0
+#     filters:
+#       campaign.is_deleted: 0
 
   - measure: total_amount_all_opportunities
     type: sum
     sql: ${TABLE}.amount_all_opportunities
-    filters:
-      campaign.is_deleted: 0
+#     filters:
+#       campaign.is_deleted: 0
 
   - measure: total_amount_won_opportunities
     type: sum
     sql: ${TABLE}.amount_won_opportunities
-    filters:
-      campaign.is_deleted: 0
+#     filters:
+#       campaign.is_deleted: 0

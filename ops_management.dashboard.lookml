@@ -4,12 +4,14 @@
   rows:
     - elements: [total_active_customers, total_revenue, average_deal_size]
       height: 150
-    - elements: [lead_to_win_funnel, lead_to_win_funnel_table]
-      height: 300
-    - elements: [rep_roster, sales_segment_performance]
-      height: 300
+    - elements: [lead_to_win_funnel]
+      height: 400
+    - elements: [lead_to_win_funnel_table, rep_roster]
+      height: 400
+    - elements: [sales_segment_performance]
+      height: 400
     - elements: [pipeline_forecast_3_months]
-      height: 300
+      height: 400
 
   filters:
 

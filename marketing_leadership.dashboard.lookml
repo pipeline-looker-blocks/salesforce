@@ -5,11 +5,13 @@
     - elements: [total_active_customers, total_revenue_this_quarter, average_deal_size_this_quarter]
       height: 150
     - elements: [lead_to_win_funnel_this_quarter, deals_closed_by_segment]
-      height: 300
-    - elements: [prospects_by_forecast_category_and_segment, pipeline_forecast]
-      height: 300
+      height: 400
+    - elements: [prospects_by_forecast_category_and_segment]
+      height: 400
+    - elements: [pipeline_forecast]
+      height: 400
     - elements: [sales_segment_performance, rep_roster_and_total_pipeline_revenue]
-      height: 300
+      height: 400
 
   filters:
   

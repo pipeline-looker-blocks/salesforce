@@ -1,5 +1,5 @@
 - view: _user
-  sql_table_name: salesforce.sf_user
+  sql_table_name: looker_salesforce.sf_user
   fields:
 
   - dimension: id
@@ -197,4 +197,3 @@
     - company_name
     - community_nickname
     - firstname
-
