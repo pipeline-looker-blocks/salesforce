@@ -14,16 +14,16 @@
       height: 400
 
   filters:
-  
+
   - name: state
     type: field_filter
     explore: account
     field: account.billing_state
-    
+
 #     @shaun add date filter here
 
   elements:
-  
+
   - name: total_active_customers
     title: 'Total Active Customers'
     type: single_value
@@ -39,7 +39,7 @@
     text_color: '#49719a'
     height: 2
     width: 4
-    
+
   - name: total_revenue_this_quarter
     title: 'Total Revenue Closed (Quarter-to-Date)'
     type: single_value
@@ -54,7 +54,7 @@
     text_color: black
     height: 2
     width: 4
-    
+
   - name: average_deal_size_this_quarter
     title: 'Average Deal Size (Quarter-to-Date)'
     type: single_value
@@ -68,8 +68,8 @@
     font_size: medium
     text_color: black
     height: 2
-    width: 4    
-  
+    width: 4
+
   - name: lead_to_win_funnel_this_quarter
     title: 'Lead to Win Funnel (Quarter-to-Date)'
     type: looker_column
@@ -108,7 +108,7 @@
     show_dropoff: true
     height: 4
     width: 6
-    
+
   - name: deals_closed_by_segment
     title: 'Deals Closed by Segment'
     type: looker_area
@@ -166,7 +166,7 @@
     show_view_names: true
     height: 4
     width: 6
-    
+
   - name: pipeline_forecast
     title: 'Pipeline Forecast'
     type: looker_column
@@ -203,8 +203,8 @@
     x_axis_scale: ordinal
     ordering: none
     show_null_labels: false
-    
-    
+
+
   - name: sales_segment_performance
     title: 'Sales Segment Performance'
     type: looker_column
@@ -236,7 +236,7 @@
     x_axis_scale: auto
     y_axis_orientation: [left, right]
     show_null_labels: false
-    
+
   - name: rep_roster_and_total_pipeline_revenue
     title: 'Rep Roster By Average Annual Revenue and Total Pipeline Revenue'
     type: looker_column
@@ -268,5 +268,4 @@
     y_axis_orientation: [right]
     x_axis_label_rotation: 0
     show_null_labels: false
-      
-    
+

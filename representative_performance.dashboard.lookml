@@ -10,19 +10,19 @@
       height: 400
     - elements: [salesrep_win_rate_comparison, salesrep_revenue_pipeline_comparison]
       height: 400
-  
+
   filters:
-  
+
   - name: sales_rep
     type: field_filter
     explore: opportunity
     field: opportunity_owner.name
-    
+
   - name: sales_segment
     type: field_filter
     explore: account
     field: account.business_segment
-    
+
 #     @shaun add date filter here
 
   elements:
@@ -59,8 +59,8 @@
     font_size: small
     text_color: '#49719a'
     width: 3
-    height: 2 
-    
+    height: 2
+
   - name: count_lost_deals
     title: 'Count of Lost Deals (This Quarter)'
     type: single_value
@@ -77,7 +77,7 @@
     text_color: '#49719a'
     width: 3
     height: 2
-    
+
   - name: win_percentage
     title: 'Win Percentage of Closed Deals (This Quarter)'
     type: single_value
@@ -94,7 +94,7 @@
     text_color: '#49719a'
     width: 3
     height: 2
-    
+
   - name: opportunities_to_wins_trend_peers
     title: 'Opportunities to Wins by Rep'
     type: looker_line
@@ -110,8 +110,7 @@
       value_format: '#.0%'
     hidden_fields: [opportunity.count_won, opportunity.count]
     listen:
-      sales_segment: opportunity_owner.department_select
-      sales_rep: opportunity_owner.name_select 
+      sales_rep: opportunity_owner.name_select
     filters:
       opportunity.created_month: 9 months ago for 9 months
     sorts: [opportunity.created_month desc, opportunity_owner.rep_comparitor]
@@ -140,7 +139,7 @@
     interpolation: linear
     width: 12
     height: 4
-    
+
   - name: salesrep_revenue_won_comparison
     title: 'SalesRep - Revenue Won comparison'
     type: looker_bar
@@ -149,8 +148,7 @@
     dimensions: [opportunity_owner.rep_comparitor]
     measures: [opportunity.average_revenue_won]
     listen:
-      sales_segment: opportunity_owner.department_select
-      sales_rep: opportunity_owner.name_select 
+      sales_rep: opportunity_owner.name_select
     sorts: [opportunity_owner.rep_comparitor]
     limit: 500
     query_timezone: America/Los_Angeles
@@ -176,7 +174,7 @@
     show_null_labels: false
     width: 6
     height: 3
-    
+
   - name: salesrep_win_rate_comparison
     title: 'SalesRep - Win Rate Comparison'
     type: looker_bar
@@ -185,8 +183,7 @@
     dimensions: [opportunity_owner.rep_comparitor]
     measures: [opportunity.win_percentage]
     listen:
-      sales_segment: opportunity_owner.department_select
-      sales_rep: opportunity_owner.name_select 
+      sales_rep: opportunity_owner.name_select
     sorts: [opportunity_owner.rep_comparitor]
     limit: 500
     query_timezone: America/Los_Angeles
@@ -212,7 +209,7 @@
     show_null_labels: false
     width: 6
     height: 3
-    
+
   - name: salesrep_revenue_pipeline_comparison
     title: 'SalesRep - Revenue Pipeline comparison'
     type: looker_bar
@@ -221,8 +218,7 @@
     dimensions: [opportunity_owner.rep_comparitor]
     measures: [opportunity_owner.average_revenue_pipeline]
     listen:
-      sales_segment: opportunity_owner.department_select
-      sales_rep: opportunity_owner.name_select 
+      sales_rep: opportunity_owner.name_select
     sorts: [opportunity_owner.rep_comparitor]
     limit: 500
     query_timezone: America/Los_Angeles
@@ -247,4 +243,4 @@
     x_axis_scale: auto
     show_null_labels: false
     width: 6
-    height: 3    
+    height: 3
