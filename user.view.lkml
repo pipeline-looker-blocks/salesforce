@@ -1,5 +1,5 @@
 view: _user {
-  sql_table_name: looker_salesforce.sf_user ;;
+  sql_table_name: salesforce.sf_user ;;
 
   dimension: id {
     primary_key: yes

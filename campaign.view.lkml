@@ -1,5 +1,5 @@
 view: _campaign {
-  sql_table_name: looker_salesforce.sf_campaign ;;
+  sql_table_name: salesforce.sf_campaign ;;
   # dimensions #
 
   dimension: id {

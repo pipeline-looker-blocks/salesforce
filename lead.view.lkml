@@ -1,5 +1,5 @@
 view: _lead {
-  sql_table_name: looker_salesforce.sf_lead ;;
+  sql_table_name: salesforce.sf_lead ;;
   # dimensions #
 
   dimension: id {
