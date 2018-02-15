@@ -231,7 +231,7 @@ view: opportunity {
   dimension_group: close {
     type: time
     timeframes:[date,week,month,raw]
-    sql: ${TABLE}.closedddate;;
+    sql: ${TABLE}.closeddate;;
   }
 
   dimension: days_open {
