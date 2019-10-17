@@ -148,7 +148,7 @@ view: _campaign {
 
   measure: total_number_of_converted_leads {
     type: sum
-    sql: ${TABLE}.number_of_converted_leads ;;
+    sql: ${number_of_converted_leads} ;;
   }
 
   #     filters:
@@ -156,7 +156,7 @@ view: _campaign {
 
   measure: total_number_of_leads {
     type: sum
-    sql: ${TABLE}.number_of_leads ;;
+    sql: ${number_of_leads} ;;
   }
 
   #     filters:
@@ -164,7 +164,7 @@ view: _campaign {
 
   measure: total_number_of_opportunities {
     type: sum
-    sql: ${TABLE}.number_of_opportunities ;;
+    sql: ${number_of_opportunities} ;;
 
     filters: {
       field: campaign.is_deleted
@@ -174,7 +174,7 @@ view: _campaign {
 
   measure: total_number_of_responses {
     type: sum
-    sql: ${TABLE}.number_of_responses ;;
+    sql: ${number_of_responses} ;;
   }
 
   #     filters:
@@ -182,7 +182,7 @@ view: _campaign {
 
   measure: total_number_of_won_opportunities {
     type: sum
-    sql: ${TABLE}.number_of_won_opportunities ;;
+    sql: ${number_of_won_opportunities} ;;
   }
 
   #     filters:
@@ -191,7 +191,7 @@ view: _campaign {
   measure: total_number_sent {
     type: sum
     hidden: yes
-    sql: ${TABLE}.number_sent ;;
+    sql: ${number_sent} ;;
   }
 
   #     filters:
@@ -199,7 +199,7 @@ view: _campaign {
 
   measure: total_actual_cost {
     type: sum
-    sql: ${TABLE}.actual_cost ;;
+    sql: ${actual_cost} ;;
   }
 
   #     filters:
@@ -207,7 +207,7 @@ view: _campaign {
 
   measure: total_amount_all_opportunities {
     type: sum
-    sql: ${TABLE}.amount_all_opportunities ;;
+    sql: ${amount_all_opportunities} ;;
   }
 
   #     filters:
@@ -215,7 +215,7 @@ view: _campaign {
 
   measure: total_amount_won_opportunities {
     type: sum
-    sql: ${TABLE}.amount_won_opportunities ;;
+    sql: ${amount_won_opportunities} ;;
   }
 }
 

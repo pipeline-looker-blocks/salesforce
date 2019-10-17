@@ -198,7 +198,7 @@ view: _lead {
 
   measure: avg_annual_revenue {
     type: average
-    sql: ${TABLE}.annual_revenue ;;
+    sql: ${annual_revenue} ;;
   }
 }
 
